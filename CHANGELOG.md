@@ -31,12 +31,12 @@ each app's plan pass.
 
 - **Update notices**: an admin runs `/release` in Discord. It posts in #announcements, and
   every older app shows an "Update available" bar with a download button within 5 minutes.
-- **Downloads** from Cloudflare R2 through personal, short-lived links, capped to stay free.
+- **Downloads** from Cloudflare R2 through personal, short-lived links, with usage caps for cost control.
 - **Custom plans** for single users, and DMs when a plan changes or is about to end.
 - **Invite-only sign-in**: only members of the Discord server can use the app. The sign-in page
   names the Discord account you used, so a wrong-account sign-in is easy to spot.
 - **Per-bot SOCKS5 proxies**: a bot connects from the proxy's IP and never falls back to a
-  direct connection. Includes a setup script for a free cloud VM proxy.
+  direct connection. Includes a setup script for a cloud VM proxy.
 
 ## 15 Nov 2026
 

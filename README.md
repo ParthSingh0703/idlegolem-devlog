@@ -32,7 +32,7 @@ the rest every hour. See [CHANGELOG.md](CHANGELOG.md).
 | Desktop app | Electron for macOS (universal) and Windows; tray icon, splash screen, encrypted passwords |
 | Android app | A real APK with a Node runtime inside it, a foreground service and a WebView dashboard |
 | Accounts | Cloudflare Worker + D1 database, Discord OAuth and slash commands, Ed25519-signed plan passes |
-| Downloads | Cloudflare R2, with hard caps that keep it inside the free tier |
+| Downloads | Cloudflare R2 with built-in cost controls: usage caps, short-lived personal links, storage limits |
 | Release build | esbuild bundle, own code obfuscated, Minecraft data trimmed from ~500 MB to a few MB |
 
 ## Problems worth a story
@@ -50,8 +50,9 @@ the rest every hour. See [CHANGELOG.md](CHANGELOG.md).
 - **Clicking menus that fight back.** Server menus are inventories with buttons. Taking items
   needed shift-clicks, because a plain click only works once per opening. Some clicks are
   dropped while the server is busy, so every menu step retries a few times.
-- **Staying free.** File downloads, accounts and update notices all run on Cloudflare's free
-  tiers, with limits built into the code so a busy month can't turn into a bill.
+- **Keeping costs predictable.** Downloads, accounts and update notices run on Cloudflare's
+  edge, and the code enforces its own budgets: monthly download caps, per-link and per-day
+  limits, and a storage ceiling, so a busy month can't turn into a surprise bill.
 
 ## Timeline
 
